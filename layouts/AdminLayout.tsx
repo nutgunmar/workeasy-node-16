@@ -1,4 +1,4 @@
-import { Layout, Menu, Dropdown, Button } from "antd";
+import { Layout, Menu, Dropdown, Button, Avatar } from "antd";
 import { SettingOutlined, HomeOutlined, UserOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import React from "react";
@@ -61,12 +61,8 @@ const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {projectName}
           </div>
           <Dropdown overlay={userMenu} trigger={["click"]}>
-            <Button
-              type="text"
-              icon={<UserOutlined />}
-              style={{ color: "#fff" }}
-            >
-              User
+            <Button type="text" style={{ color: "#fff" }}>
+              <Avatar icon={<UserOutlined />} /> User
             </Button>
           </Dropdown>
         </Header>
